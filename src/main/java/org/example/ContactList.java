@@ -2,6 +2,8 @@ package org.example;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.logging.Logger;
+import java.util.logging.Level;
+
 public class ContactList {
     static Logger l = Logger.getLogger("com.api.jar");
     static HashMap<String, Contact> contacts = new HashMap<>();
@@ -64,9 +66,9 @@ public class ContactList {
     static void searchContact(String name) {
         Contact contact = contacts.get(name);
         if (contact != null) {
-            l.info("Name: " + contact.name);
-            l.info("Phone: " + contact.phone);
-            l.info("Email: " + contact.email);
+            l.log(Level.INFO,()->"Name: " + contact.name);
+            l.log(Level.INFO,()->"Phone: " + contact.phone);
+            l.log(Level.INFO,()->"Email: " + contact.email);
         } else {
             l.info("Contact not found.");
         }
