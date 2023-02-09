@@ -2,7 +2,7 @@ package org.example;
 import java.util.Scanner;
 import java.util.HashMap;
 public class ContactList {
-//    static HashMap<String, Contact> contacts = new HashMap<>();
+    static HashMap<String, Contact> contacts = new HashMap<>();
     static class Contact {
         String name;
         String phone;
